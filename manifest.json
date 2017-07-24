@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "facebook-blocker",
+    "description": "Chrome extension that blocks posts having keywords that you provide Edit",
+    "version": "1.0",
+    "author": "shafeeqonline",
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "facebook_16.png",
+        "48": "facebook_48.png",
+        "128": "facebook_128.png"
+    },
+    "browser_action": {
+        "default_icon": "facebook_16.png",
+        "default_title": "facebook-blocker"
+    },
+    "content_scripts": [{
+        "matches": ["https://*/*"],
+        "js": ["content.js"]
+    }],
+    "permissions": [
+        "activeTab"
+    ]
+}
