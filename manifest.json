@@ -16,13 +16,16 @@
     },
     "browser_action": {
         "default_icon": "facebook_16.png",
-        "default_title": "facebook-blocker"
+        "default_title": "facebook-blocker",
+        "default_popup": "popup.html"
     },
     "content_scripts": [{
         "matches": ["https://*/*"],
-        "js": ["content.js"]
+        "js": ["content.js"],
+        "css" : ["style.css"]
     }],
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage"
     ]
 }
